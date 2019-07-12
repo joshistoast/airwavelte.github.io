@@ -13,27 +13,6 @@
 
 <body>
 
-  <div class="modal fade" tabindex="-1" role="dialog" id="goodResultsModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <p class="modal-title">Coverage Results</p>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h1>Hooray!</h1>
-          <p>It looks like we come out to your area, we'll be in touch about how we can improve your internet
-            experience!</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <header class="container site-head">
     <nav class="navbar navbar-expand-lg navbar-light my-5">
       <a href="#0" class="navbar-brand">
@@ -139,14 +118,34 @@
         <h1>Are You Covered?</h1>
         <h5 class="subtitle text-muted">Sign up to see if we cover your area!</h5>
       </div>
-      <div class="row justify-content-center mt-5" no-validation>
-        <form class="col-sm-6 col-md-4 needs-validation" action="index.html#coverage">
-          <div class="form-group">
-            <input type="email" class="form-control form-control-lg my-2" placeholder="Email Address" required>
-            <input type="text" class="form-control form-control-lg my-2" placeholder="Zip Code" required>
-            <button type="submit" class="btn btn-primary my-3 btn-block" data-toggle="modal"
-              data-target="#goodResultsModal">Check Coverage</button>
+      <div class="row justify-content-center mt-5">
+
+        <form class="col-sm-6 col-md-4 _form _form_3 _inline-form _dark" method="POST"
+          action="https://velocitylte.activehosted.com/proc.php" id="_form_3_" novalidate>
+          <input type="hidden" name="u" value="3" />
+          <input type="hidden" name="f" value="3" />
+          <input type="hidden" name="s" />
+          <input type="hidden" name="c" value="0" />
+          <input type="hidden" name="m" value="0" />
+          <input type="hidden" name="act" value="sub" />
+          <input type="hidden" name="v" value="2" />
+
+          <div class="form-group _form-content">
+
+            <input type="text" name="email" class="form-control form-control-lg my-2" placeholder="Email Address"
+              required>
+            <input type="text" name="field[3]" class="form-control form-control-lg my-2" placeholder="Zip Code"
+              required>
+            <div class="captcha">
+              <div class="g-recaptcha" data-sitekey="6LcwIw8TAAAAACP1ysM08EhCgzd6q5JAOUR1a0Go">
+              </div>
+            </div>
+            <button type="submit" id="_form_3_submit" class="btn btn-primary my-3 btn-block _submit">Get Updates</button>
+            <div class="_form-thank-you" style="display:none;">
+            </div>
+
           </div>
+
         </form>
       </div>
 
@@ -178,6 +177,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
